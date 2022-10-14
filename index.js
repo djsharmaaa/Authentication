@@ -3,8 +3,12 @@ const express=require('express');
 
 
 const app=express();
-const port = process.env.PORT || 8000; 
+const port = process.env.PORT || 7000; 
 
+
+
+//use express router
+app.use('/',require('./routes'));
 
 app.listen(port, function(err){
     if (err){
