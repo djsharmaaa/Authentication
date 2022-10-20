@@ -36,17 +36,15 @@ module.exports.signin = function(req,res){
 
 // for log out
 module.exports.logout = function(req,res){
-    req.flash('Success', 'logged-out')
-    req.logout();
-    return res.render('signin');
+    req.flash('Success', 'logged-out');
+    req.logout(function(err){
+        if(err){return next(err);}
+    });
+    return res.redirect('/signin');
     
 }
 
-//for reset password
 
-module.exports.resetPassword =  function(req,res){
-    return res.redirect('./resetPassword');
-}
 
 
 
@@ -56,7 +54,11 @@ module.exports.createSession =  function(req,res){
 
 
 
+//for reset password
 
+module.exports.resetPassword =  function(req,res){
+    return res.render('resetPassword');
+}
 
 
 // // module.exports.actionName = function(req, res){}

@@ -18,7 +18,7 @@ passport.use(new LocalStrategy({
             }
 
             if (!User || User.password != password){
-                req.flash('Invalid Username/Password');
+                req.flash('error','Invalid Username/Password');
                 return done(null, false);
             }
             else{
@@ -48,7 +48,7 @@ passport.deserializeUser(function(id, done){
             return done(err);
         }
 
-        return done(null, user);
+        return done(null,User);
     });
 });
 

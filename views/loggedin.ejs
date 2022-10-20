@@ -1,0 +1,23 @@
+<link rel = 'stylesheet' href = "/css/loggedin.css">
+
+<script> scr="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css">
+
+
+
+<div id='nav'>
+    <div>
+        <a href="/logout"> Logout</a>
+    </div>
+    <div>
+        <strong><%= locals.user.name.toUpperCase()%> </strong>
+    </div>
+</div>
+
+
+<div id='main'>
+    <p> <strong>Name</strong>: <%= locals.user.name%></p>
+    <p> <strong>Email</strong>: <%= locals.user.email%></p>
+    <p style="background-color: pink;">
+    <a href='/resetpassword' target="_blank">RESET PASSWORD</a></p>
+</div>

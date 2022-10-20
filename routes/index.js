@@ -1,9 +1,9 @@
 const express=require('express');
 const router=express.Router();
 const passport=require('passport');
-const homeController = require('../controllers/Home_controllers');
+// const homeController = require('../controllers/Home_controllers');
 
-console.log('router loaded');
+// console.log('router loaded');
 
 
 router.get('/', require('../controllers/Home_controllers').login);

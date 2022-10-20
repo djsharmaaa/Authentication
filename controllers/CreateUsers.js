@@ -1,5 +1,5 @@
-const User = require('../models/user');
 const user = require('../models/user');
+ 
 
 //creating a session or user
 
@@ -12,7 +12,7 @@ module.exports.createUser = function(req,res){
                 return res.redirect('back');
               }
               else if(req.body.password!==req.body.confirmpassword){
-                req.flash('error','password and confirm password are not same');
+              req.flash('error','password and confirm password are not same');
                 return res.redirect('back');
               }else{
                 user.create(req.body,function(err,User){});
