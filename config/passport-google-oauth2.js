@@ -29,7 +29,7 @@ passport.use(new googleStrategy({
                 user.create({
                     name:profile.displayName,
                     email:profile.emails[0].value,
-                    password: crypto.randomBytes(20)
+                    password: crypto.randomBytes(20).tostring('hex')
                 },
                 function(err,User){
                     if(err){

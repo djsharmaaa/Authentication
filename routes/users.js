@@ -11,7 +11,7 @@ router.get('/auth/google/callback',passport.authenticate('google',{failureRedire
 
 
 router.post('/passwordreset', users.passwordreset)
-// router.get('/forgotpage', users.forgotpage);
+router.get('/forgotpage', users.forgotpage);
 router.get('/newpassword',users.newpassword);
 router.post('/sendlink', users.sendlink);
 

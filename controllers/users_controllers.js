@@ -28,9 +28,9 @@ module.exports.passwordreset = function(req, res) {
 }
 
 
-// module.exports.forgotpage =  funtion(req,res){
-//           return res.render('sendlink');
-//          }
+module.exports.forgotpage =  function(req,res){
+          return res.render('sendlink');
+         }
 
 
 
